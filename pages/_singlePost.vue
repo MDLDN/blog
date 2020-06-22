@@ -10,6 +10,36 @@
       <span v-if="date" class="date-wrapper">
         <strong>Published on:</strong> {{ date }}
       </span>
+      <div class="content">
+        <social-sharing :url="url" :title="title" :description="description">
+          <div>
+            <network network="facebook">
+              <b-icon
+                icon="facebook"
+                size="is-medium"
+                custom-size="fa-2x"
+                class="red"
+              ></b-icon>
+            </network>
+            <network network="twitter">
+              <b-icon
+                class="red"
+                icon="twitter"
+                size="is-medium"
+                custom-size="fa-2x"
+              ></b-icon>
+            </network>
+            <network network="whatsapp">
+              <b-icon
+                icon="whatsapp"
+                size="is-medium"
+                custom-size="fa-2x"
+                class="red"
+              ></b-icon>
+            </network>
+          </div>
+        </social-sharing>
+      </div>
     </site-hero>
     <main-section :one-column-constrained="true">
       <template v-slot:default>
